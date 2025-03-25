@@ -1,15 +1,7 @@
+import { Message } from "../models/interfaces"
 import { ChatbotIcon } from "./ChatbotIcon"
 
-interface ChatMessageProps {
-    chat: {
-        role: "user" | "model"
-        text: string
-        hideInChat?: boolean
-        isError?: boolean
-    }
-}
-
-function ChatMessage({ chat }: ChatMessageProps) {
+export function ChatMessage(chat: Message) {
     return (
         !chat.hideInChat && (
             <div className={`nyex-chatbot-message nyex-chatbot-${chat.role === "model" ? "bot" : "user"}-message${chat.isError ? " error" : ""}`}>
@@ -19,5 +11,3 @@ function ChatMessage({ chat }: ChatMessageProps) {
         )
     )
 }
-
-export { ChatMessage }

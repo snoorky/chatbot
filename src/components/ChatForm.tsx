@@ -1,35 +1,35 @@
 import { useRef } from "react"
+import { Forms } from "../models/interfaces"
+import { AIResponseService } from "../services/AIResponse"
 
-interface Chat {
-    role: "user" | "model";
-    text: string;
-    hideInChat?: boolean;
-    isError?: boolean;
-  }
-
-interface ChatFormProps {
-    chatHistory: Chat[]
-    setChatHistory: (value: Chat[] | ((prevState: Chat[]) => Chat[])) => void;
-    generateBotresponse: (messages: Chat[]) => void;
-}
-
-function ChatForm({ chatHistory, setChatHistory, generateBotresponse }: ChatFormProps) {
+export function ChatForm({ chatHistory, setChatHistory }: Forms) {
     const inputRef = useRef<HTMLInputElement>(null)
+    const aiResponseService = new AIResponseService()
 
-    const handleFormSubmit = (event: React.FormEvent) => {
+    const handleFormSubmit = async (event: React.FormEvent) => {
         event.preventDefault()
         const userMessage = inputRef.current?.value.trim() ?? ""
 
         if (!userMessage) return
-        if (inputRef.current) inputRef.current.value = "";
+        if (inputRef.current) inputRef.current.value = ""
 
         setChatHistory((history) => [...history, { role: "user", text: userMessage }])
 
-        setTimeout(() => {
+        setTimeout(async () => {
             setChatHistory((history) => [...history, { role: "model", text: "..." }])
-            generateBotresponse([...chatHistory, {
-                role: "user", text: `Usando as informações fornecidas acima, por favor, responda a esta consulta: ${userMessage}`
-            }])
+            try {
+                const response = await aiResponseService.generateResponse([...chatHistory, {
+                    role: "user", text: userMessage
+                }])
+                setChatHistory(prevHistory => [...prevHistory.filter(message => message.text != "..."), response])
+            } catch (error) {
+                console.error("Error generating response:", error)
+                setChatHistory(prevHistory => [...prevHistory.filter(message => message.text != "..."), {
+                    role: "model",
+                    text: (error as Error).message,
+                    isError: true
+                }])
+            }
         }, 600)
     }
 
@@ -40,5 +40,3 @@ function ChatForm({ chatHistory, setChatHistory, generateBotresponse }: ChatForm
         </form>
     )
 }
-
-export { ChatForm }

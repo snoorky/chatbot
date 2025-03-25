@@ -231,7 +231,7 @@
   background-color: var(--background-color-red-hover);
 }
 
-.nyex-chatbot-form .nyex-chatbot-input:valid ~ button {
+.nyex-chatbot-form .nyex-chatbot-input:valid~button {
   display: block;
 }
 
@@ -245,16 +245,16 @@
   color: var(--background-color-red);
 }
 
-@media (width <= 40rem) {
+@media (width <=40rem) {
   .nyex-chatbot-popup {
-      border-radius: 0;
-      bottom: 0;
-      height: 100%;
-      right: 0;
-      width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 100%;
   }
 
   .nyex-chatbot-body {
-      height: calc(90% - 4rem);
+    height: calc(90% - 4rem);
   }
 }

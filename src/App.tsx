@@ -3,17 +3,11 @@ import { ChatbotIcon } from "./components/ChatbotIcon"
 import { ChatMessage } from "./components/ChatMessage"
 import { ChatForm } from "./components/ChatForm"
 import { companyInfo } from "./companyInfo"
+import { Message } from "./models/interfaces"
 
-interface ChatMessage {
-  role: "user" | "model"
-  text: string
-  hideInChat?: boolean
-  isError?: boolean
-}
-
-function App() {
+export default function App() {
   const [showChatbot, setShowChatbot] = useState<boolean>(false)
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([
+  const [chatHistory, setChatHistory] = useState<Message[]>([
     {
       role: "model",
       text: companyInfo,
@@ -22,32 +16,6 @@ function App() {
   ])
 
   const chatBodyRef = useRef<HTMLDivElement>(null)
-
-  const generateBotResponse = async (history: ChatMessage[]) => {
-    const updateHistory = (response: string, isError: boolean = false) => {
-      setChatHistory(history => [...history.filter(message => message.text != "..."), { role: "model", text: response, isError }])
-    }
-
-    const formattedHistory = history.map(({ role, text }) => ({ role, parts: [{ text }] }))
-
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents: formattedHistory }),
-    }
-
-    try {
-      const response = await fetch(import.meta.env.VITE_API_URL, requestOptions)
-      const data = await response.json()
-
-      if (!response.ok) throw new Error(data.error?.message || "Algo deu errado!")
-
-      const apiResponse = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim()
-      updateHistory(apiResponse)
-    } catch (error) {
-      updateHistory((error as Error).message, true)
-    }
-  }
 
   useEffect(() => {
     if (chatBodyRef.current) {
@@ -80,17 +48,15 @@ function App() {
           </div>
 
           {chatHistory.map((chat, index) => (
-            <ChatMessage key={index} chat={chat} />
+            <ChatMessage key={index} {...chat} />
           ))}
         </div>
 
         <div className="nyex-chatbot-footer">
-          <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generateBotresponse={generateBotResponse} />
+          <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} />
           <p className="nyex-copyright">Developed by <span>Raphael</span></p>
         </div>
       </div>
     </div>
   )
 }
-
-export default App
