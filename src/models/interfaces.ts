@@ -13,3 +13,7 @@ export interface Forms {
 export interface UseCase {
     generateResponse(chatHistory: Message[]): Promise<Message>
 }
+
+export interface InteractiveTextProps {
+    text: string
+}

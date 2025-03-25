@@ -7,13 +7,7 @@ import { Message } from "./models/interfaces"
 
 export default function App() {
   const [showChatbot, setShowChatbot] = useState<boolean>(false)
-  const [chatHistory, setChatHistory] = useState<Message[]>([
-    {
-      role: "model",
-      text: companyInfo,
-      hideInChat: true,
-    },
-  ])
+  const [chatHistory, setChatHistory] = useState<Message[]>([])
 
   const chatBodyRef = useRef<HTMLDivElement>(null)
 
