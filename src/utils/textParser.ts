@@ -21,7 +21,6 @@ export const getUrlType = (url: string): string => {
 }
 
 export const formatPhoneNumber = (phone: string): string => { return phone.trim() }
-
 export const formatEmail = (email: string): string => { return email.trim() }
 
 export const parseInteractiveElements = (text: string) => {
