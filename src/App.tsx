@@ -7,7 +7,13 @@ import { Message } from "./models/interfaces"
 
 export default function App() {
   const [showChatbot, setShowChatbot] = useState<boolean>(false)
-  const [chatHistory, setChatHistory] = useState<Message[]>([])
+  const [chatHistory, setChatHistory] = useState<Message[]>([
+    // {
+    //   role: "model",
+    //   text: companyInfo,
+    //   hideInChat: true,
+    // },
+  ])
 
   const chatBodyRef = useRef<HTMLDivElement>(null)
 
@@ -18,27 +24,27 @@ export default function App() {
   }, [chatHistory])
 
   return (
-    <div className={`nyex-chatbot${showChatbot ? " show-chatbot" : ""}`}>
+    <div className={`chatbot${showChatbot ? " show-chatbot" : ""}`}>
 
-      <button onClick={() => setShowChatbot(prev => !prev)} className="nyex-chatbot-toggler">
+      <button onClick={() => setShowChatbot(prev => !prev)} className="chatbot-toggler">
         <span className="material-symbols-rounded">mode_comment</span>
         <span className="material-symbols-rounded">close</span>
       </button>
 
-      <div className="nyex-chatbot-popup" role="complementary">
+      <div className="chatbot-popup" role="complementary">
 
-        <div className="nyex-chatbot-header">
-          <div className="nyex-chatbot-info">
+        <div className="chatbot-header">
+          <div className="chatbot-info">
             <ChatbotIcon />
-            <h2 className="nyex-chatbot-name">Chatbot</h2>
+            <h2 className="chatbot-name">Chatbot</h2>
           </div>
           <button onClick={() => setShowChatbot(prev => !prev)} className="material-symbols-rounded">keyboard_arrow_down</button>
         </div>
 
-        <div ref={chatBodyRef} className="nyex-chatbot-body">
-          <div className="nyex-chatbot-message nyex-chatbot-bot-message">
+        <div ref={chatBodyRef} className="chatbot-body">
+          <div className="chatbot-message chatbot-bot-message">
             <ChatbotIcon />
-            <p className="nyex-chatbot-message-text">Olá! <br />Como posso te ajudar?</p>
+            <p className="chatbot-message-text">Olá! <br />Como posso te ajudar?</p>
           </div>
 
           {chatHistory.map((chat, index) => (
@@ -46,9 +52,9 @@ export default function App() {
           ))}
         </div>
 
-        <div className="nyex-chatbot-footer">
+        <div className="chatbot-footer">
           <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} />
-          <p className="nyex-copyright">Developed by <span>Raphael</span></p>
+          <p className="copyright">Developed by <span>Raphael</span></p>
         </div>
       </div>
     </div>

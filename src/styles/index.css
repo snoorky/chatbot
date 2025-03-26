@@ -4,7 +4,11 @@
   --background-color-black: oklch(25.2% 0 0);
   --background-color-gray: oklch(95.21% 0 0);
   --background-color-red: oklch(63.57% 0.199 27.49);
-  --background-color-red-hover: oklch(56.13% 0.1987 27.46);
+  --background-color-red-hover: oklch(53.57% 0.199 27.49);
+  --background-color-blue: oklch(56.77% 0.1665 251.31);
+  --background-color-blue-hover: oklch(46.77% 0.1665 251.31);
+  --background-color-green: oklch(51.04% 0.1654 142.67);
+  --background-color-green-hover: oklch(41.04% 0.1654 142.67);
   --background-color-white: oklch(100% 0 0);
   --transition: all 0.2 ease;
 }
@@ -17,26 +21,26 @@
   padding: 0;
 }
 
-.nyex-chatbot.show-chatbot .nyex-chatbot-toggler {
+.chatbot.show-chatbot .chatbot-toggler {
   transform: rotate(90deg);
 }
 
-.nyex-chatbot-toggler span:last-child,
-.nyex-chatbot.show-chatbot .nyex-chatbot-toggler span:first-child {
+.chatbot-toggler span:last-child,
+.chatbot.show-chatbot .chatbot-toggler span:first-child {
   opacity: 0;
 }
 
-.nyex-chatbot.show-chatbot .nyex-chatbot-toggler span:last-child {
+.chatbot.show-chatbot .chatbot-toggler span:last-child {
   opacity: 1;
 }
 
-.nyex-chatbot.show-chatbot .nyex-chatbot-popup {
+.chatbot.show-chatbot .chatbot-popup {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
 }
 
-.nyex-chatbot-toggler {
+.chatbot-toggler {
   align-items: center;
   background-color: var(--background-color-red);
   border: none;
@@ -52,12 +56,12 @@
   width: 3rem;
 }
 
-.nyex-chatbot-toggler span {
+.chatbot-toggler span {
   color: var(--background-color-white);
   position: absolute;
 }
 
-.nyex-chatbot-popup {
+.chatbot-popup {
   background-color: var(--background-color-white);
   border-radius: 1rem;
   bottom: 6rem;
@@ -73,7 +77,7 @@
   width: 27rem;
 }
 
-.nyex-chatbot-popup .nyex-chatbot-header {
+.chatbot-popup .chatbot-header {
   align-items: center;
   background-color: var(--background-color-red);
   display: flex;
@@ -81,13 +85,13 @@
   padding: 1rem 1.5rem;
 }
 
-.nyex-chatbot-header .nyex-chatbot-info {
+.chatbot-header .chatbot-info {
   align-items: center;
   display: flex;
   gap: 1rem;
 }
 
-.nyex-chatbot-info svg {
+.chatbot-info svg {
   background-color: var(--background-color-white);
   border-radius: 50%;
   fill: var(--background-color-red);
@@ -97,13 +101,13 @@
   width: 2.5rem;
 }
 
-.nyex-chatbot-info .nyex-chatbot-name {
+.chatbot-info .chatbot-name {
   color: var(--background-color-white);
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.nyex-chatbot-header button {
+.chatbot-header button {
   background: none;
   border: none;
   border-radius: 50%;
@@ -117,11 +121,11 @@
   width: 2rem;
 }
 
-.nyex-chatbot-header button:hover {
+.chatbot-header button:hover {
   background-color: var(--background-color-red-hover);
 }
 
-.nyex-chatbot-body {
+.chatbot-body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -133,17 +137,17 @@
   scrollbar-width: thin;
 }
 
-.nyex-chatbot-body .nyex-chatbot-message {
+.chatbot-body .chatbot-message {
   align-items: center;
   display: flex;
   gap: 0.5rem;
 }
 
-.nyex-chatbot-body .nyex-chatbot-message.error .nyex-chatbot-message-text {
+.chatbot-body .chatbot-message.error .chatbot-message-text {
   color: var(--background-color-red);
 }
 
-.nyex-chatbot-body .nyex-chatbot-bot-message svg {
+.chatbot-body .chatbot-bot-message svg {
   align-self: flex-end;
   background-color: var(--background-color-red);
   border-radius: 50%;
@@ -154,7 +158,7 @@
   width: 2rem;
 }
 
-.nyex-chatbot-body .nyex-chatbot-message .nyex-chatbot-message-text {
+.chatbot-body .chatbot-message .chatbot-message-text {
   font-size: 0.9rem;
   max-width: 75%;
   padding: 1rem;
@@ -162,25 +166,25 @@
   word-wrap: break-word;
 }
 
-.nyex-chatbot-body .nyex-chatbot-bot-message .nyex-chatbot-message-text {
+.chatbot-body .chatbot-bot-message .chatbot-message-text {
   background-color: var(--background-color-gray);
   border-radius: 0.75rem;
   border-bottom-left-radius: 0.15rem;
 }
 
-.nyex-chatbot-body .nyex-chatbot-user-message {
+.chatbot-body .chatbot-user-message {
   align-items: flex-end;
   flex-direction: column;
 }
 
-.nyex-chatbot-body .nyex-chatbot-user-message .nyex-chatbot-message-text {
+.chatbot-body .chatbot-user-message .chatbot-message-text {
   background-color: var(--background-color-red);
   border-radius: 0.75rem;
   border-bottom-right-radius: 0.15rem;
   color: var(--background-color-white);
 }
 
-.nyex-chatbot-footer {
+.chatbot-footer {
   background-color: var(--background-color-white);
   bottom: 0;
   padding: 1rem 1rem 0.5rem;
@@ -188,7 +192,7 @@
   width: 100%;
 }
 
-.nyex-chatbot-footer .nyex-chatbot-form {
+.chatbot-footer .chatbot-form {
   align-items: center;
   background-color: var(--background-color-white);
   border-radius: 2rem;
@@ -197,11 +201,11 @@
   outline: 1px solid var(--background-color-gray);
 }
 
-.nyex-chatbot-footer .nyex-chatbot-form:focus-within {
+.chatbot-footer .chatbot-form:focus-within {
   outline: 1px solid var(--background-color-red);
 }
 
-.nyex-chatbot-form .nyex-chatbot-input {
+.chatbot-form .chatbot-input {
   background: none;
   border: none;
   font-size: 0.9rem;
@@ -211,7 +215,7 @@
   width: 100%;
 }
 
-.nyex-chatbot-form button {
+.chatbot-form button {
   background-color: var(--background-color-red);
   border: none;
   border-radius: 50%;
@@ -227,26 +231,26 @@
   width: 2rem;
 }
 
-.nyex-chatbot-form button:hover {
+.chatbot-form button:hover {
   background-color: var(--background-color-red-hover);
 }
 
-.nyex-chatbot-form .nyex-chatbot-input:valid~button {
+.chatbot-form .chatbot-input:valid~button {
   display: block;
 }
 
-.nyex-copyright {
+.copyright {
   font-size: 0.75rem;
   margin-top: 0.5rem;
   text-align: center;
 }
 
-.nyex-copyright span {
+.copyright span {
   color: var(--background-color-red);
 }
 
 @media (width <=40rem) {
-  .nyex-chatbot-popup {
+  .chatbot-popup {
     border-radius: 0;
     bottom: 0;
     height: 100%;
@@ -254,7 +258,7 @@
     width: 100%;
   }
 
-  .nyex-chatbot-body {
+  .chatbot-body {
     height: calc(90% - 4rem);
   }
 }

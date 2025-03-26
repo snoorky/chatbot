@@ -34,8 +34,8 @@ export function ChatForm({ chatHistory, setChatHistory }: Forms) {
     }
 
     return (
-        <form action="#" className="nyex-chatbot-form" onSubmit={handleFormSubmit}>
-            <input ref={inputRef} type="text" className="nyex-chatbot-input" placeholder="Mensagem..." required />
+        <form action="#" className="chatbot-form" onSubmit={handleFormSubmit}>
+            <input ref={inputRef} type="text" className="chatbot-input" placeholder="Mensagem..." required />
             <button className="material-symbols-rounded">arrow_upward</button>
         </form>
     )
