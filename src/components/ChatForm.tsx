@@ -19,11 +19,11 @@ export function ChatForm({ chatHistory, setChatHistory }: Forms) {
             setChatHistory((history) => [...history, { role: "model", text: "..." }])
             try {
                 const response = await aiResponseService.generateResponse([...chatHistory, {
-                    role: "user", text: userMessage
+                    role: "user", text: `${userMessage}`
                 }])
                 setChatHistory(prevHistory => [...prevHistory.filter(message => message.text != "..."), response])
             } catch (error) {
-                console.error("Error generating response:", error)
+                console.error("Erro ao gerar a resposta:", error)
                 setChatHistory(prevHistory => [...prevHistory.filter(message => message.text != "..."), {
                     role: "model",
                     text: (error as Error).message,

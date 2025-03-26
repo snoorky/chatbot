@@ -15,7 +15,6 @@
 
 * {
   box-sizing: border-box;
-  color: var(--background-color-black);
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
@@ -162,14 +161,92 @@
   font-size: 0.9rem;
   max-width: 75%;
   padding: 1rem;
-  white-space: pre-line;
   word-wrap: break-word;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text h1 {
+  font-size: 1.1rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text h2 {
+  font-size: 1.075rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text h3 {
+  font-size: 1.050rem;
+}
+
+.chatbot-body.chatbot-message.chatbot-message-text h4 {
+  font-size: 1.025rem;
+}
+
+.chatbot-body.chatbot-message.chatbot-message-text h5 {
+  font-size: 1rem;
+}
+
+.chatbot-body.chatbot-message.chatbot-message-text h6 {
+  font-size: 0.9rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text blockquote {
+  border-left: 2px solid #374151;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-left: 1rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text a {
+  color: var(--background-color-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text ul,
+.chatbot-body .chatbot-message .chatbot-message-text ol {
+  margin-left: 1.5rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text code {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  font-family: monospace;
+  padding: .15rem .3rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text pre {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  text-wrap: pretty;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text pre code {
+  background: none;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text img {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-width: 100%;
+}
+
+.chatbot-body .chatbot-message .chatbot-message-text hr {
+  border-top-width: 1px;
+  margin-block: 1rem;
 }
 
 .chatbot-body .chatbot-bot-message .chatbot-message-text {
   background-color: var(--background-color-gray);
   border-radius: 0.75rem;
   border-bottom-left-radius: 0.15rem;
+  color: var(--background-color-black);
 }
 
 .chatbot-body .chatbot-user-message {

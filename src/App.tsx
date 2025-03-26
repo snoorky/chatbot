@@ -4,15 +4,16 @@ import { ChatMessage } from "./components/ChatMessage"
 import { ChatForm } from "./components/ChatForm"
 import { companyInfo } from "./companyInfo"
 import { Message } from "./models/interfaces"
+import ReactMarkdown from "react-markdown"
 
 export default function App() {
   const [showChatbot, setShowChatbot] = useState<boolean>(false)
   const [chatHistory, setChatHistory] = useState<Message[]>([
-    // {
-    //   role: "model",
-    //   text: companyInfo,
-    //   hideInChat: true,
-    // },
+    {
+      role: "model",
+      text: companyInfo,
+      hideInChat: true,
+    },
   ])
 
   const chatBodyRef = useRef<HTMLDivElement>(null)
@@ -44,7 +45,9 @@ export default function App() {
         <div ref={chatBodyRef} className="chatbot-body">
           <div className="chatbot-message chatbot-bot-message">
             <ChatbotIcon />
-            <p className="chatbot-message-text">Olá! <br />Como posso te ajudar?</p>
+            <div className="chatbot-message-text">
+              <ReactMarkdown>Olá! Como posso te ajudar?</ReactMarkdown>
+            </div>
           </div>
 
           {chatHistory.map((chat, index) => (
@@ -54,7 +57,7 @@ export default function App() {
 
         <div className="chatbot-footer">
           <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} />
-          <p className="copyright">Developed by <span>Raphael</span></p>
+          <p className="copyright">Desenvolvido por <span>Raphael</span></p>
         </div>
       </div>
     </div>
