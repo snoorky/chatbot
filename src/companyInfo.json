@@ -1,0 +1,310 @@
+{
+  "botName": "Maximus",
+  "companyName": "Beforce",
+  "overview": {
+    "description": "A Beforce é uma empresa especializada em transformação digital, com o propósito de ajudar seus clientes a alcançar sucesso e prosperidade no mercado. Com mais de 13 anos de experiência, a empresa oferece soluções online para otimizar processos de gestão, comunicação e automação, reduzindo custos, melhorando a organização e apoiando na tomada de decisões estratégicas.",
+    "mission": "Fortalecer empresas de todos os portes por meio da transformação digital, ajudando-as a se tornarem líderes em seus mercados.",
+    "vision": "Ser reconhecida nacionalmente como autoridade no desenvolvimento de estratégias digitais e na implementação de tecnologias voltadas para negócios.",
+    "values": ["lealdade", "humildade", "honestidade", "profissionalismo", "competência", "comprometimento", "desenvolvimento", "reconhecimento", "evolução"],
+    "yearsOfExperience": 13,
+    "customerService": "O atendimento da Beforce é ágil e personalizado. Nossa equipe está sempre disponível para oferecer soluções rápidas e eficazes, sem filas de espera. Acreditamos que o relacionamento próximo com os clientes é a chave para o sucesso. Consideramos nossos clientes como parceiros de negócios e estamos comprometidos com o crescimento e a prosperidade deles.",
+    "partnerships": ["Instituto Gold", "Conexões Empreendedoras", "Echosis", "SPP2Work", "Donu", "Communika", "Humaitrix"]
+  },
+  "team": [
+    {
+      "name": "Diego Budemberg",
+      "role": "Especialista em Processos e Negócios Digitais"
+    },
+    {
+      "name": "Otávio Paulino",
+      "role": "Especialista em Implantação de Sistemas de Gestão"
+    },
+    {
+      "name": "Augusto Pessato",
+      "role": "Especialista em Web Design"
+    },
+    {
+      "name": "Renan Ayres",
+      "role": "Especialista em Copywriting e Marketing Digital"
+    },
+    {
+      "name": "Vinícius Calegari",
+      "role": "Analista de Sistemas de Gestão"
+    },
+    {
+      "name": "Raphael Lopes",
+      "role": "Analista em Web Design"
+    },
+    {
+      "name": "Jaqueline Moragriega",
+      "role": "Representante Comercial e Especialista em Vendas"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Sistemas de Gestão",
+      "description": "Automatizar processos empresariais, melhorar a organização, reduzir custos e melhorar a produtividade utilizando sistemas de gestão adaptáveis ao negócio.",
+      "process": [
+        {
+          "step": "Análise do Negócio",
+          "description": "Identificação dos pontos fracos e gargalos nos processos da empresa."
+        },
+        {
+          "step": "Diagnóstico",
+          "description": "Escolha do sistema de gestão mais adequado para o negócio, levando em consideração custo-benefício, necessidades operacionais e escalabilidade."
+        },
+        {
+          "step": "Implantação",
+          "description": "Personalização do sistema de acordo com as especificidades do negócio."
+        },
+        {
+          "step": "Treinamento da Equipe",
+          "description": "Capacitação da equipe para utilizar a ferramenta de forma eficaz."
+        },
+        {
+          "step": "Monitoramento",
+          "description": "Acompanhamento dos cadastros e processos no sistema para garantir que tudo esteja funcionando conforme os treinamentos."
+        },
+        {
+          "step": "Evolução Contínua",
+          "description": "Acompanhamento mensal para otimizar o uso do sistema, garantindo maior aproveitamento da ferramenta."
+        }
+      ],
+      "features": [
+        {
+          "name": "Emissão de Notas Fiscais",
+          "description": "Facilita a emissão de notas fiscais de produtos ou serviços."
+        },
+        {
+          "name": "Gestão de Estoques",
+          "description": "Controle detalhado e organização de produtos no estoque."
+        },
+        {
+          "name": "Gestão de Vendas e Orçamentos",
+          "description": "Ferramentas para gerenciar vendas, comissionamentos, e envios de orçamentos."
+        },
+        {
+          "name": "Gestão Financeira",
+          "description": "Controle de contas a pagar/receber, orçamento e relatórios financeiros."
+        },
+        {
+          "name": "Controle de Produção e PCP",
+          "description": "Gerenciamento do andamento de ordens de produção e controle de processos."
+        },
+        {
+          "name": "Integração com CRMs",
+          "description": "Ferramentas para organizar e gerenciar o relacionamento com clientes, fornecedores, etc."
+        },
+        {
+          "name": "Controle de Ponto",
+          "description": "Gerenciamento das jornadas de trabalho da equipe, incluindo controle de horas trabalhadas."
+        }
+      ],
+      "segments": [
+        {
+          "name": "Prestadores de Serviços",
+          "description": "Empresas que oferecem diversos tipos de serviços e precisam gerenciar oportunidades de negócios, contratos, ordens de serviço, etc."
+        },
+        {
+          "name": "Comércios",
+          "description": "Empresas que vendem produtos diretamente e precisam gerenciar estoques, vendas, processos de pagamento e fechamento de caixa."
+        },
+        {
+          "name": "Indústrias",
+          "description": "Empresas que produzem ou fazem a transformação de produtos, necessitando de controle rígido das compras de matérias-primas e gestão de produção."
+        }
+      ],
+      "differentials": [
+        "Suporte em tempo real para resolver questões técnicas ou operacionais.",
+        "Equipe especializada com mais de 12 anos de experiência.",
+        "Compromisso com resultados, focando no cumprimento de prazos e na melhoria contínua do desempenho do negócio."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "WhatsApp e Comunicadores",
+      "description": "Integrar diversos canais de comunicação, como WhatsApp, em uma plataforma única, melhorando a agilidade e organização no atendimento ao cliente.",
+      "process": [
+        {
+          "step": "Centralização de Canais",
+          "description": "Todos os contatos dos principais apps de comunicação (WhatsApp, chat online, etc.) são centralizados em uma única plataforma."
+        },
+        {
+          "step": "Automação de Atendimento",
+          "description": "Utilização de robôs de atendimento para automatizar a triagem e qualificações de leads e mensagens."
+        },
+        {
+          "step": "Gerenciamento de Equipe e Fluxo de Trabalho",
+          "description": "Facilitação da organização do atendimento, com possibilidade de transferir mensagens para o departamento ou atendente correto com apenas um clique."
+        },
+        {
+          "step": "Monitoramento de Atendimentos",
+          "description": "Supervisão em tempo real dos atendimentos e interações entre os colaboradores e os clientes."
+        },
+        {
+          "step": "Home Office",
+          "description": "Controle dos atendimentos e monitoramento do desempenho da equipe, mesmo que os colaboradores estejam em home office."
+        }
+      ],
+      "features": [
+        {
+          "name": "Painel Gerencial",
+          "description": "Visualização em tempo real de todos os atendimentos realizados, performance da equipe e resultados obtidos."
+        },
+        {
+          "name": "Robôs de Atendimento",
+          "description": "Triagem e organização automatizada dos contatos. Os robôs realizam o atendimento inicial e passam o caso para os operadores apenas quando necessário."
+        },
+        {
+          "name": "Integração com CRM",
+          "description": "Melhora a experiência do cliente e otimiza o processo de cadastro e acompanhamento de informações."
+        },
+        {
+          "name": "Gestão de Atendimento 24/7",
+          "description": "Os robôs podem atender fora do horário comercial, garantindo que nenhuma dúvida ou problema seja deixado sem resposta."
+        },
+        {
+          "name": "Organização por Departamentos e Equipe",
+          "description": "Direcionamento das mensagens automaticamente para os atendentes ou departamentos corretos."
+        },
+        {
+          "name": "Monitoramento de Home Office",
+          "description": "Ferramentas específicas para empresas com equipes trabalhando remotamente, permitindo o controle e supervisão em tempo real."
+        }
+      ],
+      "differentials": [
+        "Atendimento Ágil e Organizado: Organiza o atendimento de forma eficiente, sem deixar contatos sem resposta.",
+        "Suporte em Tempo Real: Equipe de suporte disponível para resolver qualquer problema técnico.",
+        "Integração com CRMs e ferramentas de gestão para maior agilidade e performance.",
+        "Personalização de Atendimento: Configuração de automação e scripts de atendimento de acordo com as necessidades da empresa."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Websites",
+      "description": "Criar sites institucionais, e-commerces, landing pages e blogs com design moderno, responsivo e otimizado para conversão, para empresas de diferentes portes e nichos.",
+      "process": [
+        {
+          "step": "Planejamento e Análise de Necessidades",
+          "description": "Compreensão do objetivo do site, da identidade da empresa e do público-alvo."
+        },
+        {
+          "step": "Desenvolvimento Personalizado",
+          "description": "Criação de sites personalizados de acordo com a estratégia de marketing e objetivos da empresa."
+        },
+        {
+          "step": "Design Responsivo",
+          "description": "Desenvolvimento de sites que se ajustam perfeitamente a qualquer dispositivo, como smartphones, tablets e desktops."
+        },
+        {
+          "step": "SEO e Otimização",
+          "description": "Sites otimizados para motores de busca (SEO), garantindo maior visibilidade nas pesquisas e atração de visitantes qualificados."
+        },
+        {
+          "step": "Lançamento e Acompanhamento",
+          "description": "Após a entrega do site, acompanhamento do desempenho e melhorias contínuas para aumentar a eficácia e conversão."
+        }
+      ],
+      "features": [
+        {
+          "name": "Design Moderno e Responsivo",
+          "description": "Layouts atraentes e responsivos que se ajustam a diferentes dispositivos."
+        },
+        {
+          "name": "Integração com Redes Sociais",
+          "description": "Conexão com plataformas como Facebook, Instagram, entre outras, para facilitar o compartilhamento e engajamento."
+        },
+        {
+          "name": "Otimização para SEO",
+          "description": "Ferramentas de SEO integradas para garantir visibilidade nos motores de busca."
+        },
+        {
+          "name": "Gerenciamento Simples",
+          "description": "Interface de administração amigável, permitindo que a empresa atualize o conteúdo do site de forma simples."
+        },
+        {
+          "name": "Análise de Desempenho",
+          "description": "Relatórios e métricas de desempenho, incluindo visitas, taxas de conversão e comportamentos do usuário."
+        }
+      ],
+      "differentials": [
+        "Design Personalizado: Desenvolvimento de sites únicos, alinhados com a identidade visual e as necessidades da empresa.",
+        "Otimização para Conversão: Sites focados em conversão, com estratégias de UX (User Experience) para melhorar a jornada do usuário.",
+        "Suporte Técnico: Equipe especializada para prestar suporte contínuo e resolver qualquer questão técnica."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Website Rápido",
+      "description": "Criar websites ágeis e com baixo custo, com foco em resultados rápidos, para empresas que precisam de presença online imediata, sem perder a qualidade e performance.",
+      "process": [
+        {
+          "step": "Criação Rápida de Layouts Pré-definidos",
+          "description": "Utilização de templates prontos e personalizáveis para acelerar o processo de desenvolvimento."
+        },
+        {
+          "step": "Foco na Velocidade de Carregamento",
+          "description": "Sites otimizados para carregamento rápido e boa experiência do usuário."
+        },
+        {
+          "step": "Solução Custo-Benefício",
+          "description": "Criamos um site eficiente com baixo custo e alto retorno, focado na funcionalidade básica e objetiva."
+        },
+        {
+          "step": "Lançamento Rápido",
+          "description": "Entrega em tempo recorde, com um site pronto para ser lançado e gerenciar de forma eficaz a presença online."
+        }
+      ],
+      "features": [
+        {
+          "name": "Templates Prontos",
+          "description": "Escolha entre uma série de templates otimizados que atendem diferentes nichos de mercado."
+        },
+        {
+          "name": "Integração Básica com Redes Sociais",
+          "description": "Links para redes sociais e outras plataformas, melhorando a interação com o público."
+        },
+        {
+          "name": "SEO Básico",
+          "description": "Otimização para motores de busca para garantir que o site seja encontrado pelos clientes."
+        },
+        {
+          "name": "Fácil Atualização",
+          "description": "Plataforma simples de administrar, permitindo que a empresa atualize seu conteúdo com facilidade."
+        },
+        {
+          "name": "Suporte Inicial",
+          "description": "Suporte técnico imediato durante a fase de implantação."
+        }
+      ],
+      "differentials": [
+        "Entrega Rápida: O site é desenvolvido e entregue em um prazo curto, ideal para quem precisa de presença online imediata.",
+        "Custo Benefício: Solução econômica para empresas que buscam um site simples, eficiente e de boa performance."
+      ]
+    }
+  ],
+  "contact": {
+    "support": {
+      "phone": "(15) 3042-0727",
+      "phoneLink": "tel:+551530420727"
+    },
+    "commercial": {
+      "phone": "(15) 99604-4772",
+      "whatsappLink": "https://api.whatsapp.com/send?phone=5515996044772"
+    },
+    "email": "contato@beforce.com.br",
+    "emailLink": "mailto:contato@beforce.com.br",
+    "website": "https://www.beforce.com.br",
+    "address": {
+      "street": "Rua Santa Clara",
+      "number": "199",
+      "floor": "2º Andar",
+      "neighborhood": "Centro",
+      "city": "Sorocaba",
+      "state": "SP",
+      "zipCode": "18035-251",
+      "fullAddress": "Rua Santa Clara, 199, 2º Andar, Centro, Sorocaba, SP, CEP: 18035-251"
+    }
+  }
+}

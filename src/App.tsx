@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { ChatbotIcon } from "./components/ChatbotIcon"
 import { ChatMessage } from "./components/ChatMessage"
 import { ChatForm } from "./components/ChatForm"
-import { companyInfo } from "./companyInfo"
+import companyInfoData from './companyInfo.json'
 import { Message } from "./models/interfaces"
 import ReactMarkdown from "react-markdown"
 import { MessageCircle, X, ChevronDown } from "lucide-react"
@@ -12,7 +12,7 @@ export default function App() {
   const [showChatbot, setShowChatbot] = useState<boolean>(false)
   const [chatHistory, setChatHistory] = useState<Message[]>([{
     role: "model",
-    text: companyInfo,
+    text: JSON.stringify(companyInfoData),
     hideInChat: true,
   },])
 
