@@ -5,18 +5,16 @@ import { ChatForm } from "./components/ChatForm"
 import { companyInfo } from "./companyInfo"
 import { Message } from "./models/interfaces"
 import ReactMarkdown from "react-markdown"
+import { MessageCircle, X, ChevronDown } from "lucide-react"
 
 export default function App() {
-  const [showChatbot, setShowChatbot] = useState<boolean>(false)
-  const [chatHistory, setChatHistory] = useState<Message[]>([
-    {
-      role: "model",
-      text: companyInfo,
-      hideInChat: true,
-    },
-  ])
-
   const chatBodyRef = useRef<HTMLDivElement>(null)
+  const [showChatbot, setShowChatbot] = useState<boolean>(false)
+  const [chatHistory, setChatHistory] = useState<Message[]>([{
+    role: "model",
+    text: companyInfo,
+    hideInChat: true,
+  },])
 
   useEffect(() => {
     if (chatBodyRef.current) {
@@ -28,8 +26,8 @@ export default function App() {
     <div className={`chatbot${showChatbot ? " show-chatbot" : ""}`}>
 
       <button onClick={() => setShowChatbot(prev => !prev)} className="chatbot-toggler">
-        <span className="material-symbols-rounded">mode_comment</span>
-        <span className="material-symbols-rounded">close</span>
+        <span><MessageCircle /></span>
+        <span><X /></span>
       </button>
 
       <div className="chatbot-popup" role="complementary">
@@ -39,7 +37,7 @@ export default function App() {
             <ChatbotIcon />
             <h2 className="chatbot-name">Chatbot</h2>
           </div>
-          <button onClick={() => setShowChatbot(prev => !prev)} className="material-symbols-rounded">keyboard_arrow_down</button>
+          <button onClick={() => setShowChatbot(prev => !prev)}><ChevronDown /></button>
         </div>
 
         <div ref={chatBodyRef} className="chatbot-body">

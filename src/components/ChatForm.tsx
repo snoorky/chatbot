@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { Forms } from "../models/interfaces"
 import { AIResponseService } from "../services/AIResponse"
+import { ArrowUp } from "lucide-react"
 
 export function ChatForm({ chatHistory, setChatHistory }: Forms) {
     const inputRef = useRef<HTMLInputElement>(null)
@@ -36,7 +37,7 @@ export function ChatForm({ chatHistory, setChatHistory }: Forms) {
     return (
         <form action="#" className="chatbot-form" onSubmit={handleFormSubmit}>
             <input ref={inputRef} type="text" className="chatbot-input" placeholder="Mensagem..." required />
-            <button className="material-symbols-rounded">arrow_upward</button>
+            <button><ArrowUp /></button>
         </form>
     )
 }
